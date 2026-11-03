@@ -1,0 +1,63 @@
+{
+  "name": "dsh-product-model-compare",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local STEP/STL/OBJ 3D workbench for DeepSeek Harness: single or dual model viewing, pose dimensions, alignment, part isolation and temporary measurements. No product library, no uploads.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOMAD-bri/dsh-product-model-compare.git"
+  },
+  "homepage": "https://github.com/NOMAD-bri/dsh-product-model-compare#readme",
+  "bugs": {
+    "url": "https://github.com/NOMAD-bri/dsh-product-model-compare/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "local-viewer.js",
+    "parse-step.py",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "vendor/**",
+    "scripts/**",
+    "README.md",
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.md",
+    "UI-ARCHITECTURE.md"
+  ],
+  "scripts": {
+    "scan": "node scripts/scan-models.mjs",
+    "test": "node test/api.test.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "three.js",
+    "step",
+    "cad",
+    "3d-viewer",
+    "measurement"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

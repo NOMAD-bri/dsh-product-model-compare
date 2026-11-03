@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+
+# local, machine-specific data
+legacy/
+*.step-index.json
+step-index.json
+
+# credentials
+.gh-token
+.env
+
+# build / release output
+dist/
+*.zip
+*.tgz
+
+# test and editor noise
+test/tmp/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
